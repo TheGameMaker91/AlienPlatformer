@@ -16,6 +16,10 @@ function set_on_ground(_val = true)
 
 controls_setup();
 
+idle_spr = sprPlayer1Idle;
+walk_spr = sprPlayer1Walk;
+jump_spr = sprPlayer1Jump;
+facing_dir = 1;
 move_dir = 0;
 move_spd = 4;
 xspeed = 0;

@@ -3,6 +3,10 @@
 get_controls();
 
 move_dir = right_key - left_key;
+
+if (move_dir != 0)
+	facing_dir = move_dir;
+
 xspeed = move_dir * move_spd;
 
 #region Handle the x-collision & movement
@@ -10,13 +14,32 @@ xspeed = move_dir * move_spd;
 var _sub_pixel = 0.5;
 if (place_meeting(x + xspeed, y, objSolid))
 {
-	var _pixel_check = _sub_pixel * sign(xspeed);
-	while (!place_meeting(x + _pixel_check, y, objSolid))
+	if (!place_meeting(x + xspeed, y - abs(xspeed) - 1, objSolid))
 	{
-		x += _pixel_check;
-	} 
-	xspeed = 0;
+		while (place_meeting(x + xspeed, y, objSolid))
+		{
+			y -= _sub_pixel;
+		}
+	}
+	else
+	{
+		var _pixel_check = _sub_pixel * sign(xspeed);
+		while (!place_meeting(x + _pixel_check, y, objSolid))
+		{
+			x += _pixel_check;
+		} 
+		xspeed = 0;
+	}
 }
+
+if (yspeed >= 0 && !place_meeting(x + xspeed, y + 1, objSolid) && place_meeting(x + xspeed, y + abs(xspeed) + 1, objSolid))
+{
+	while (!place_meeting(x + xspeed, y + _sub_pixel, objSolid))
+	{
+		y += _sub_pixel;
+	}
+}
+
 x += xspeed;
 #endregion
 #region Handle the y-collision & movement
@@ -95,4 +118,13 @@ if (yspeed >= 0 && place_meeting(x, y + 1, objSolid))
 }
 
 y += yspeed;
+#endregion
+#region Handle sprite control
+if (abs(xspeed) > 0)
+	sprite_index = walk_spr
+if (xspeed == 0)
+	sprite_index = idle_spr;
+if (!on_ground)
+	sprite_index = jump_spr;
+
 #endregion
