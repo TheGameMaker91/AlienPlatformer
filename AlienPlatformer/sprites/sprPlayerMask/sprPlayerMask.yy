@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "sprPlayerMask",
   "bbox_bottom": 69,
-  "bbox_left": 0,
-  "bbox_right": 69,
+  "bbox_left": 18,
+  "bbox_right": 53,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04a6a89d-de0a-4121-8a70-e479832b71c0",},
   ],
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 18,
+  "gridY": 18,
   "height": 70,
   "HTile": false,
   "layers": [

@@ -26,7 +26,7 @@ xspeed = 0;
 yspeed = 0;
 
 grav = 0.275;
-term_vel = 4;
+term_vel = 10;
 jump_max = 2;
 jump_count = 0;
 jump_hold_timer = 0;

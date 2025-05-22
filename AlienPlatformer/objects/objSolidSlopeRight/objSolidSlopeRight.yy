@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Solid",
-    "path": "folders/Objects/Solid.yy",
+    "path": "folders/Objects/Tiles/Solid.yy",
   },
   "parentObjectId": {
     "name": "objSolid",
@@ -33,5 +33,5 @@
     "path": "sprites/sprSolidSlopeRight/sprSolidSlopeRight.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

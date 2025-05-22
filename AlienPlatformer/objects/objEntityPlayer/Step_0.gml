@@ -4,10 +4,14 @@ get_controls();
 
 move_dir = right_key - left_key;
 
-if (move_dir != 0)
+if (move_dir != 0 && on_ground)
 	facing_dir = move_dir;
-
 xspeed = move_dir * move_spd;
+
+if (x < 36)
+	x = 36;
+if (x > room_width - 36)
+	x = room_width - 36;
 
 #region Handle the x-collision & movement
 // X Collision:

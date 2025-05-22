@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Objects/Entity.yy",
+    "name": "Control",
+    "path": "folders/Objects/Control.yy",
   },
   "parentObjectId": null,
   "persistent": false,
