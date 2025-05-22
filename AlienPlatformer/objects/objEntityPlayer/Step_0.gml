@@ -20,8 +20,15 @@ if (place_meeting(x + xspeed, y, objSolid))
 x += xspeed;
 #endregion
 #region Handle the y-collision & movement
-// Y Movement:
-yspeed += grav;
+if (coyote_hang_timer > 0)
+{
+	coyote_hang_timer--;
+}
+else
+{
+	yspeed += grav;
+	set_on_ground(false);
+}
 
 if (on_ground)
 {
@@ -32,6 +39,8 @@ else
 {
 	if (jump_count == 0)
 		jump_count = 1;
+	
+	coyote_hang_timer = 0;
 }
 
 // Jump:
@@ -44,6 +53,8 @@ if (jump_key_buffered && jump_count < jump_max)
 	
 	// Set the jump hold timer:
 	jump_hold_timer = jump_hold_frames[jump_count - 1];
+	
+	set_on_ground(false);
 }
 
 if (!jump_key)
@@ -78,8 +89,10 @@ if (place_meeting(x, y + yspeed, objSolid))
 }
 
 // Set if i'm on the ground:
-on_ground = (yspeed >= 0 && place_meeting(x, y + 1, objSolid));
+if (yspeed >= 0 && place_meeting(x, y + 1, objSolid))
+{
+	set_on_ground(true);
+}
 
 y += yspeed;
-
 #endregion
