@@ -33,10 +33,22 @@ jump_hold_timer = 0;
 jump_hold_frames[0] = 18;
 jspeed[0] = -5.5;
 jump_hold_frames[1] = 10;
-jspeed[1] = -3.5;
+jspeed[1] = -4.5;
 on_ground = true;
 
 coyote_hang_frames = 4;
 coyote_hang_timer = 0;
 coyote_jump_frames = 5;
 coyote_jump_timer = 0;
+
+player_state = player_state_normal;
+active = false;
+start_x = x;
+start_y = y;
+invincibility_frames = 30;
+invincible = false;
+hurt = false;
+dead = false;
+
+// Active timer:
+alarm[0] = 15;

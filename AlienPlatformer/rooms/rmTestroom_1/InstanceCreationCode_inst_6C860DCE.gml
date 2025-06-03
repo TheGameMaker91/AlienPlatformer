@@ -1,0 +1,1 @@
+color = COLORS.RED;

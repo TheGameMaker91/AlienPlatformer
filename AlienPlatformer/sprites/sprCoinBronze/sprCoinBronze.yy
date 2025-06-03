@@ -13,14 +13,16 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dcc43b40-e482-4381-95c4-cedc1ad018a9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"981d1ac3-3803-4521-94b0-f5519d0e1b86",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35169484-89f3-4f73-bf35-4ade8cb799cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d280b00-6385-41fe-a2bb-4729d7423f63",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 70,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"29274b93-0f63-4be9-a6aa-bd683df6110b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c6013814-31e7-4d9b-91ef-75c52b19fe89","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dcc43b40-e482-4381-95c4-cedc1ad018a9","path":"sprites/sprCoinBronze/sprCoinBronze.yy",},},},"Disabled":false,"id":"f4a8d5aa-90c3-4ba8-b69a-4315365ad9cf","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"981d1ac3-3803-4521-94b0-f5519d0e1b86","path":"sprites/sprCoinBronze/sprCoinBronze.yy",},},},"Disabled":false,"id":"ada594c6-3e69-4900-b7a3-03df0e24aa29","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"35169484-89f3-4f73-bf35-4ade8cb799cc","path":"sprites/sprCoinBronze/sprCoinBronze.yy",},},},"Disabled":false,"id":"862c58db-43e9-4fb3-a064-72d984f98696","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7d280b00-6385-41fe-a2bb-4729d7423f63","path":"sprites/sprCoinBronze/sprCoinBronze.yy",},},},"Disabled":false,"id":"e6d087f1-f2d8-48f9-8b81-b7709b98017b","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

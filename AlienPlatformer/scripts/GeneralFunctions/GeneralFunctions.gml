@@ -19,6 +19,8 @@ function get_controls()
 	jump_key			= keyboard_check(vk_space) + gamepad_button_check(0, gp_face1);
 	jump_key			= clamp(jump_key, 0, 1);
 	
+	duck_key			= keyboard_check(vk_down);
+	
 	// Jump key buffering:
 	if (jump_key_pressed)
 	{
@@ -33,4 +35,51 @@ function get_controls()
 	{
 		jump_key_buffered = false;
 	}
+}
+
+function explode()
+{
+	instance_destroy();
+	
+	// Create particle explosion...
+}
+
+function hurt_player()
+{
+	if (global.health > 0)
+	{
+		
+		sprite_index		= sprPlayer1Hurt;
+		if (facing_dir == 1)
+			xspeed			= -1;
+		else
+			xspeed			= 1;
+		yspeed				= -5;
+		invincibility_frames= 150;
+		invincible			= true;
+	}
+}
+
+function kill_player()
+{
+	// We'll need to pause the game, play a sound, subrtact a life, and reset the level:
+	if (!dead)
+	{
+		// This is, for the most part, temporary:
+		global.lives--;
+		dead = true;
+		x = start_x;
+		y = start_y;
+		facing_dir = 1;
+		alarm[0] = 30;
+		dead = false;
+	}
+}
+
+function draw_text_shadowed(_x, _y, _text)
+{
+	draw_set_color(c_black);
+	draw_text(_x + 2, _y + 2, _text);
+	draw_set_color($f0f0f0);
+	draw_text(_x, _y, _text);
 }

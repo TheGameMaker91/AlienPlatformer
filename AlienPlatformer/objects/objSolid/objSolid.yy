@@ -9,7 +9,10 @@
     "name": "Solid",
     "path": "folders/Objects/Tiles/Solid.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objItem",
+    "path": "objects/objItem/objItem.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
