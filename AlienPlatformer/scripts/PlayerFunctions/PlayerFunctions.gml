@@ -56,7 +56,10 @@ function player_state_normal()
 	if (_item != noone && yspeed > 0)
 	{
 		if (!_item.pressed)
+		{
 			_item.pressed = true;
+			yspeed = -4;
+		}
 	}
 	
 	// Check collision with coins:
