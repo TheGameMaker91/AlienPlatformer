@@ -80,6 +80,6 @@ function draw_text_shadowed(_x, _y, _text)
 {
 	draw_set_color(c_black);
 	draw_text(_x + 2, _y + 2, _text);
-	draw_set_color($f0f0f0);
+	draw_set_color($efefef);
 	draw_text(_x, _y, _text);
 }

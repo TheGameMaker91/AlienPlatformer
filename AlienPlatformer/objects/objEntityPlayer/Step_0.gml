@@ -3,7 +3,7 @@
 if (active)
 {
 	script_execute(player_state);
-
+	
 	if (!dead)
 	{
 		// X Collision:
@@ -119,6 +119,13 @@ if (active)
 		{
 			yspeed = -15;
 			_item.image_speed = 0.5;
+		}
+		
+		// Gain a 1up when the player collects 50 coins:
+		if (global.coins >= 50)
+		{
+			global.coins -= 50;
+			global.lives++;
 		}
 	}
 	
