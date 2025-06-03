@@ -70,6 +70,7 @@ function kill_player()
 		dead = true;
 		x = start_x;
 		y = start_y;
+		xspeed = 0;
 		facing_dir = 1;
 		alarm[0] = 30;
 		dead = false;

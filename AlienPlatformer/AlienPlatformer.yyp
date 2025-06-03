@@ -104,6 +104,7 @@
     {"id":{"name":"sprPlayer1Jump","path":"sprites/sprPlayer1Jump/sprPlayer1Jump.yy",},},
     {"id":{"name":"sprPlayer2Hurt","path":"sprites/sprPlayer2Hurt/sprPlayer2Hurt.yy",},},
     {"id":{"name":"objItemBomb","path":"objects/objItemBomb/objItemBomb.yy",},},
+    {"id":{"name":"objCloudGenerator","path":"objects/objCloudGenerator/objCloudGenerator.yy",},},
     {"id":{"name":"objInit","path":"objects/objInit/objInit.yy",},},
     {"id":{"name":"sprSpikes","path":"sprites/sprSpikes/sprSpikes.yy",},},
     {"id":{"name":"sprKey","path":"sprites/sprKey/sprKey.yy",},},

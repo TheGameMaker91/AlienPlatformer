@@ -72,6 +72,7 @@
     {"name":"sprPlayer1Jump","order":2,"path":"sprites/sprPlayer1Jump/sprPlayer1Jump.yy",},
     {"name":"sprPlayer2Hurt","order":4,"path":"sprites/sprPlayer2Hurt/sprPlayer2Hurt.yy",},
     {"name":"objItemBomb","order":1,"path":"objects/objItemBomb/objItemBomb.yy",},
+    {"name":"objCloudGenerator","order":3,"path":"objects/objCloudGenerator/objCloudGenerator.yy",},
     {"name":"sprSpikes","order":31,"path":"sprites/sprSpikes/sprSpikes.yy",},
     {"name":"sprKey","order":23,"path":"sprites/sprKey/sprKey.yy",},
     {"name":"objItemParticleBrick2","order":16,"path":"objects/objItemParticleBrick2/objItemParticleBrick2.yy",},
