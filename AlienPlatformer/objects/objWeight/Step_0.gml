@@ -18,6 +18,16 @@ if (place_meeting(x, y + yspeed, objSolid))
 y += yspeed;
 yspeed += grav;
 
+if (drop_on_enemy)
+{
+	var _inst = collision_line(x, y, x, y + 770, target, false, true);
+	if (_inst != noone)
+	{
+		if (!drop)
+			drop = true;
+	}
+}
+
 if (drop)
 	grav = 0.85;
 else

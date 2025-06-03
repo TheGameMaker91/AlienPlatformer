@@ -121,12 +121,21 @@ if (active)
 			_item.image_speed = 0.5;
 		}
 		
+		// Get flattened by weights:
+		_item = instance_place(x, y - 1, objWeight);
+		if (_item != noone && place_meeting(x, y + 1, objSolid))
+			kill_player();
+		
 		// Gain a 1up when the player collects 50 coins:
 		if (global.coins >= 50)
 		{
 			global.coins -= 50;
 			global.lives++;
 		}
+		
+		// For now, restart the game on game over:
+		if (global.lives == 0)
+			game_restart();
 	}
 	
 	// Check if we're invincible:
