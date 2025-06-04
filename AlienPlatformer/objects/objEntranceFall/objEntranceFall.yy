@@ -1,22 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objItemFlag",
+  "name": "objEntranceFall",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "name": "Solid",
+    "path": "folders/Objects/Tiles/Solid.yy",
   },
-  "parentObjectId": {
-    "name": "objItem",
-    "path": "objects/objItem/objItem.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -33,9 +28,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprFlagCaptured",
-    "path": "sprites/sprFlagCaptured/sprFlagCaptured.yy",
+    "name": "sprEntrance",
+    "path": "sprites/sprEntrance/sprEntrance.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

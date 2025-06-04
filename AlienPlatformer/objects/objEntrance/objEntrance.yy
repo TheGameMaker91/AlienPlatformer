@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objItemFlagBlue",
+  "name": "objEntrance",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "name": "Solid",
+    "path": "folders/Objects/Tiles/Solid.yy",
   },
-  "parentObjectId": {
-    "name": "objItemFlag",
-    "path": "objects/objItemFlag/objItemFlag.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,9 +26,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprFlagCaptured",
-    "path": "sprites/sprFlagCaptured/sprFlagCaptured.yy",
+    "name": "sprEntrance",
+    "path": "sprites/sprEntrance/sprEntrance.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

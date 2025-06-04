@@ -20,6 +20,9 @@ function get_controls()
 	jump_key			= clamp(jump_key, 0, 1);
 	
 	duck_key			= keyboard_check(vk_down);
+	run_key				= keyboard_check(vk_shift);
+	
+	action_key			= keyboard_check_pressed(ord("E"));
 	
 	// Jump key buffering:
 	if (jump_key_pressed)
@@ -44,7 +47,7 @@ function explode()
 	// Create particle explosion...
 }
 
-function hurt_player()
+function hurt_player(_amount)
 {
 	if (global.health > 0)
 	{
@@ -57,6 +60,7 @@ function hurt_player()
 		yspeed				= -5;
 		invincibility_frames= 150;
 		invincible			= true;
+		global.health		-= _amount;
 	}
 }
 
@@ -67,13 +71,13 @@ function kill_player()
 	{
 		// This is, for the most part, temporary:
 		global.lives--;
-		dead = true;
-		x = start_x;
-		y = start_y;
-		xspeed = 0;
-		facing_dir = 1;
-		alarm[0] = 30;
-		dead = false;
+		if (facing_dir == 1)
+			xspeed			= -1;
+		else
+			xspeed			= 1;
+		yspeed				= -5;
+		dead				= true;
+		alarm[2]			= 30;
 	}
 }
 
@@ -83,4 +87,11 @@ function draw_text_shadowed(_x, _y, _text)
 	draw_text(_x + 2, _y + 2, _text);
 	draw_set_color($efefef);
 	draw_text(_x, _y, _text);
+}
+
+function level_is_castle()
+{
+	return (
+		room == rmCastle_1A
+	);
 }

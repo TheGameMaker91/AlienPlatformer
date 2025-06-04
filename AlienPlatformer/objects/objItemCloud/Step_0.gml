@@ -1,6 +1,6 @@
 /// @description Insert description here
 // handle screen wrap:
-if (x > room_width)
+if (x < 0)
 {
 	var _cloud_height = irandom_range(72, 350);
 	x = -128;

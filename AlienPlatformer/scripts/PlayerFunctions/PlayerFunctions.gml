@@ -8,6 +8,8 @@ function player_state_normal()
 	if (move_dir > 1)
 		move_dir = 1;
 	
+	move_spd = (run_key ? 6 : 4);
+	
 	if (!right_key && !left_key)
 	{
 		move_dir *= 0.90;
@@ -162,14 +164,44 @@ function player_state_normal()
 		}
 	}
 	#endregion
+	#region Handle entrance types
+	var _inst = instance_place(x, y, objEntrance);
+	if (_inst != noone)
+	{
+		if (action_key)
+		{
+			alarm[3] = 60;
+			player_state = player_state_level_exit;
+		}
+	}
+	
+	_inst = instance_place(x, y + yspeed, objEntranceFall);
+	if (_inst != noone)
+	{
+		if (yspeed > 0)
+		{
+			x = _inst.new_x;
+			y = 0;
+		}
+	}
+	#endregion
 }
 
 function player_state_hurt()
 {
+	var _amount = 1;
 	if (!hurt)
 	{
-		hurt_player();
+		hurt_player(_amount);
 		hurt = true;
 		alarm[1] = 50;
 	}	
+}
+
+function player_state_level_exit()
+{
+	sprite_index = sprPlayer1Win;
+	xspeed = 0;
+	yspeed = 0;
+	active = false;
 }

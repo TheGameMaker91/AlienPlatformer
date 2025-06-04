@@ -119,16 +119,17 @@ if (active)
 		{
 			yspeed = -15;
 			_item.image_speed = 0.5;
-			set_on_ground(true);
 		}
 		
 		// Get flattened by weights:
 		_item = instance_place(x, y - 1, objWeight);
 		if (on_ground)
+		{
 			if (_item != noone)
+			{
 				kill_player();
-		else
-			yspeed = -yspeed;
+			}
+		}
 		
 		// Gain a 1up when the player collects 50 coins:
 		if (global.coins >= 50)
