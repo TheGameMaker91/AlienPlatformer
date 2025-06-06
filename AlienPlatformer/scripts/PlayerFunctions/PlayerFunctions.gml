@@ -33,7 +33,7 @@ function player_state_normal()
 	
 	#region Handle falling in a bottomless pit
 	// Check y-coord:
-	if (y > room_height)
+	if (y > room_height + 96)
 		if (global.die_on_level_exit)
 			kill_player();
 		else
@@ -135,6 +135,23 @@ function player_state_normal()
 		{
 			player_state = player_state_hurt;
 		}
+	}
+	
+	// Check collision with stars:
+	_item = instance_place(x, y, objItemStar);
+	if (_item != noone)
+	{
+		if (!ds_list_empty(item_list))
+		{
+			for (var i = 0; i < ds_list_size(item_list); i++)
+			{
+				with (item_list[| i])
+				{
+					item_list[| i].active = true;
+				}
+			}
+		}
+		instance_destroy(_item);
 	}
 	#endregion
 	#region Handle invincibility

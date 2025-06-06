@@ -1,1 +1,1 @@
-#macro debatable			2
+#macro DEATH_BY_HEALTH	noone

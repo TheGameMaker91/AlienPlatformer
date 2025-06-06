@@ -49,6 +49,7 @@ invincibility_frames = 30;
 invincible = false;
 hurt = false;
 dead = false;
+player_index = 1;
 
 // Active timer:
 alarm[0] = 15;

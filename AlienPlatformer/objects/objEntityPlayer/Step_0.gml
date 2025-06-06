@@ -127,7 +127,7 @@ if (active)
 		{
 			if (_item != noone)
 			{
-				kill_player();
+				kill_player(_item);
 			}
 		}
 		
@@ -136,6 +136,15 @@ if (active)
 		{
 			global.coins -= 50;
 			global.lives++;
+		}
+		
+		// Kill player when health runs out:
+		if (global.health <= 0)
+		{
+			if (!dead)
+			{
+				kill_player(DEATH_BY_HEALTH);
+			}
 		}
 		
 		// For now, restart the game on game over:

@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprBush",
-    "path": "sprites/sprBush/sprBush.yy",
+    "name": "sprPlant",
+    "path": "sprites/sprPlant/sprPlant.yy",
   },
   "spriteMaskId": null,
   "visible": true,

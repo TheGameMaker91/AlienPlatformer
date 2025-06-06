@@ -64,20 +64,30 @@ function hurt_player(_amount)
 	}
 }
 
-function kill_player()
+function kill_player(_cause=0)
 {
 	// We'll need to pause the game, play a sound, subrtact a life, and reset the level:
 	if (!dead)
 	{
+		dead					= true;
 		// This is, for the most part, temporary:
+		alarm[2]				= 60;
 		global.lives--;
-		if (facing_dir == 1)
-			xspeed			= -1;
+		if (_cause != 0)
+		{
+			if (facing_dir == 1)
+				xspeed			= -1;
+			else
+				xspeed			= 1;
+			yspeed				= -5;
+		}
 		else
-			xspeed			= 1;
-		yspeed				= -5;
-		dead				= true;
-		alarm[2]			= 30;
+		{
+			set_on_ground(true);
+			xspeed = 0;
+			yspeed = 0;
+			facing_dir = 1;
+		}
 	}
 }
 

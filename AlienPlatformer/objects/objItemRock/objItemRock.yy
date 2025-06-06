@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprPlant",
-    "path": "sprites/sprPlant/sprPlant.yy",
+    "name": "sprRock",
+    "path": "sprites/sprRock/sprRock.yy",
   },
   "spriteMaskId": null,
   "visible": true,

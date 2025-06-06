@@ -1,6 +1,6 @@
 /// @description Insert description here
 // Handle initial setup:
-global.start_room	= rmCastle_1A;
+global.start_room	= rmGrassland_1;
 
 var _inst;
 _inst = objControl;
