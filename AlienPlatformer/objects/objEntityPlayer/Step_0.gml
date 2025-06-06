@@ -119,6 +119,7 @@ if (active)
 		{
 			yspeed = -15;
 			_item.image_speed = 0.5;
+			jump_count = 1;
 		}
 		
 		// Get flattened by weights:
